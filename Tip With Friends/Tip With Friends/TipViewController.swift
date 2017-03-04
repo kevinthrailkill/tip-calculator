@@ -27,13 +27,13 @@ class TipViewController: UIViewController {
         super.viewDidLoad()
         self.tipController = TipController()
         
-        let defaults = UserDefaults.standard
-        let intValue = defaults.integer(forKey: "percentLocation")
-        self.tipPercentControl.selectedSegmentIndex = intValue
+        let font = UIFont (name: "Courier New", size: 12)
+        tipPercentControl.setTitleTextAttributes([NSFontAttributeName: font!],
+                                                for: .normal)
+
         
     }
     
-
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

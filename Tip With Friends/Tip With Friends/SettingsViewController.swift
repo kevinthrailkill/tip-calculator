@@ -20,27 +20,14 @@ class SettingsViewController: UIViewController {
         let intValue = defaults.integer(forKey: "percentLocation")
         self.settingsTipControl.selectedSegmentIndex = intValue
         
-      //  self.settingsTipControl.setEnabled(true, forSegmentAt: self.intValue!)
         
+        let font = UIFont (name: "Courier New", size: 12)
+        self.settingsTipControl.setTitleTextAttributes([NSFontAttributeName: font!],
+                                                 for: .normal)
 
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-//        let defaults = UserDefaults.standard
-//        let intValue = defaults.integer(forKey: "percentLocation")
-//        self.settingsTipControl.selectedSegmentIndex = intValue
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-       
-        
-    }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
