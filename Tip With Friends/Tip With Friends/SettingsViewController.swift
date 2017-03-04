@@ -10,11 +10,49 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var settingsTipControl: UISegmentedControl!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let defaults = UserDefaults.standard
+        let intValue = defaults.integer(forKey: "percentLocation")
+        self.settingsTipControl.selectedSegmentIndex = intValue
+        
+      //  self.settingsTipControl.setEnabled(true, forSegmentAt: self.intValue!)
+        
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+//        let defaults = UserDefaults.standard
+//        let intValue = defaults.integer(forKey: "percentLocation")
+//        self.settingsTipControl.selectedSegmentIndex = intValue
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+       
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        let defaults = UserDefaults.standard
+        
+        defaults.set(self.settingsTipControl.selectedSegmentIndex, forKey: "percentLocation")
+        defaults.synchronize()
+        
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

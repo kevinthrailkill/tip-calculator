@@ -12,25 +12,54 @@ class TipViewController: UIViewController {
     
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
-    @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipPercentControl: UISegmentedControl!
-    
     var tipController : TipController?
+
     
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var total4PeopleLabel: UILabel!
+    @IBOutlet weak var total3PeopleLabel: UILabel!
+    @IBOutlet weak var total2PeopleLabel: UILabel!
     
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tipController = TipController()
         
+        let defaults = UserDefaults.standard
+        let intValue = defaults.integer(forKey: "percentLocation")
+        self.tipPercentControl.selectedSegmentIndex = intValue
         
-
-
-        // Do any additional setup after loading the view.
     }
+    
+
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("view did appear")
+        
+        let defaults = UserDefaults.standard
+        let intValue = defaults.integer(forKey: "percentLocation")
+        self.tipPercentControl.selectedSegmentIndex = intValue
+        self.calculateTip(self)
+        
+        
+        self.billField.becomeFirstResponder()
+    }
+    
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("view did disappear")
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("view will appear")
+
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateView), name: NSNotification.Name(rawValue: "updateView"), object: nil)
 
@@ -38,20 +67,23 @@ class TipViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool){
         super.viewWillDisappear(animated)
+        print("view will disappear")
         
-        if self.navigationController!.viewControllers.contains(self) == false  //any other hierarchy compare if it contains self or not
-        {
-            // the view has been removed from the navigation stack or hierarchy, back is probably the cause
-            // this will be slow with a large stack however.
-            
-            NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "updateView"), object: nil)
-        }
+        print("remove oberver")
+        view.endEditing(true)
+
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "updateView"), object: nil)
+        
+        
     }
     
     func updateView() {
         
         self.tipLabel!.text = self.tipController!.tipViewModel?.tipString
         self.totalLabel!.text = self.tipController!.tipViewModel?.totalString
+        self.total2PeopleLabel!.text = self.tipController!.tipViewModel?.total2String
+        self.total3PeopleLabel!.text = self.tipController!.tipViewModel?.total3String
+        self.total4PeopleLabel!.text = self.tipController!.tipViewModel?.total4String
 
         
         //Insert code here

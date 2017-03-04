@@ -19,7 +19,7 @@ class TipController: NSObject {
         self.tipViewModel = TipViewModel(tipModel: tipModel)
         
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateView"), object: nil)
-
+        print("here")
         
     }
     
