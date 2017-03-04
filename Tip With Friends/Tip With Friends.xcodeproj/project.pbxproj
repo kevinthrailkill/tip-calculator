@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		19DF5A941E6757CA0063E0AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF5A931E6757CA0063E0AA /* AppDelegate.swift */; };
-		19DF5A961E6757CA0063E0AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF5A951E6757CA0063E0AA /* ViewController.swift */; };
 		19DF5A991E6757CB0063E0AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19DF5A971E6757CB0063E0AA /* Main.storyboard */; };
 		19DF5A9B1E6757CB0063E0AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DF5A9A1E6757CB0063E0AA /* Assets.xcassets */; };
 		19DF5A9E1E6757CB0063E0AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19DF5A9C1E6757CB0063E0AA /* LaunchScreen.storyboard */; };
+		19DF5AA61E6A57B00063E0AA /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF5AA51E6A57B00063E0AA /* TipViewController.swift */; };
+		19DF5AA81E6A57C70063E0AA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF5AA71E6A57C70063E0AA /* SettingsViewController.swift */; };
+		19DF5AAA1E6A57F20063E0AA /* TipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF5AA91E6A57F20063E0AA /* TipController.swift */; };
+		19DF5AAC1E6A58030063E0AA /* TipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF5AAB1E6A58030063E0AA /* TipViewModel.swift */; };
+		19DF5AAE1E6A580F0063E0AA /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF5AAD1E6A580F0063E0AA /* SettingsViewModel.swift */; };
+		19DF5AB01E6A581A0063E0AA /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF5AAF1E6A581A0063E0AA /* SettingsController.swift */; };
+		19DF5AB61E6A60630063E0AA /* TipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF5AB51E6A60630063E0AA /* TipModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		19DF5A901E6757CA0063E0AA /* Tip With Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip With Friends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DF5A931E6757CA0063E0AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		19DF5A951E6757CA0063E0AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19DF5A981E6757CB0063E0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19DF5A9A1E6757CB0063E0AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19DF5A9D1E6757CB0063E0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19DF5A9F1E6757CB0063E0AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19DF5AA51E6A57B00063E0AA /* TipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
+		19DF5AA71E6A57C70063E0AA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		19DF5AA91E6A57F20063E0AA /* TipController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipController.swift; sourceTree = "<group>"; };
+		19DF5AAB1E6A58030063E0AA /* TipViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipViewModel.swift; sourceTree = "<group>"; };
+		19DF5AAD1E6A580F0063E0AA /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		19DF5AAF1E6A581A0063E0AA /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		19DF5AB51E6A60630063E0AA /* TipModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +67,59 @@
 			isa = PBXGroup;
 			children = (
 				19DF5A931E6757CA0063E0AA /* AppDelegate.swift */,
-				19DF5A951E6757CA0063E0AA /* ViewController.swift */,
-				19DF5A971E6757CB0063E0AA /* Main.storyboard */,
-				19DF5A9A1E6757CB0063E0AA /* Assets.xcassets */,
-				19DF5A9C1E6757CB0063E0AA /* LaunchScreen.storyboard */,
+				19DF5AB71E6A60680063E0AA /* Models */,
+				19DF5AB31E6A58640063E0AA /* ViewControllers */,
+				19DF5AB11E6A58230063E0AA /* Controllers */,
+				19DF5AB21E6A585A0063E0AA /* ViewModels */,
+				19DF5AB41E6A587F0063E0AA /* Views */,
 				19DF5A9F1E6757CB0063E0AA /* Info.plist */,
 			);
 			path = "Tip With Friends";
+			sourceTree = "<group>";
+		};
+		19DF5AB11E6A58230063E0AA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				19DF5AA91E6A57F20063E0AA /* TipController.swift */,
+				19DF5AAF1E6A581A0063E0AA /* SettingsController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		19DF5AB21E6A585A0063E0AA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				19DF5AAB1E6A58030063E0AA /* TipViewModel.swift */,
+				19DF5AAD1E6A580F0063E0AA /* SettingsViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		19DF5AB31E6A58640063E0AA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				19DF5AA51E6A57B00063E0AA /* TipViewController.swift */,
+				19DF5AA71E6A57C70063E0AA /* SettingsViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		19DF5AB41E6A587F0063E0AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				19DF5A971E6757CB0063E0AA /* Main.storyboard */,
+				19DF5A9A1E6757CB0063E0AA /* Assets.xcassets */,
+				19DF5A9C1E6757CB0063E0AA /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		19DF5AB71E6A60680063E0AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				19DF5AB51E6A60630063E0AA /* TipModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19DF5A961E6757CA0063E0AA /* ViewController.swift in Sources */,
+				19DF5AB61E6A60630063E0AA /* TipModel.swift in Sources */,
+				19DF5AB01E6A581A0063E0AA /* SettingsController.swift in Sources */,
+				19DF5AAA1E6A57F20063E0AA /* TipController.swift in Sources */,
+				19DF5AA61E6A57B00063E0AA /* TipViewController.swift in Sources */,
 				19DF5A941E6757CA0063E0AA /* AppDelegate.swift in Sources */,
+				19DF5AAC1E6A58030063E0AA /* TipViewModel.swift in Sources */,
+				19DF5AA81E6A57C70063E0AA /* SettingsViewController.swift in Sources */,
+				19DF5AAE1E6A580F0063E0AA /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tip View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tip_With_Friends" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TipViewController" customModule="Tip_With_Friends" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" id="bIl-Qg-hjO">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="bIl-Qg-hjO">
                                 <rect key="frame" x="26" y="350" width="319" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -66,7 +66,7 @@
                                     <segment title="25%"/>
                                 </segments>
                                 <connections>
-                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="VAd-Kp-bgr"/>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="HCS-l5-FLk"/>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="iJ3-0t-2rx">
@@ -76,7 +76,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="oiX-eK-JJh"/>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="hHl-lF-Fhz"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -88,10 +88,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="lFb-iu-PC0"/>
                     <connections>
-                        <outlet property="billField" destination="iJ3-0t-2rx" id="RQG-a9-gk9"/>
-                        <outlet property="tipControl" destination="bIl-Qg-hjO" id="DAY-kw-LV0"/>
-                        <outlet property="tipLabel" destination="YAc-i6-oe6" id="H7W-kw-EHl"/>
-                        <outlet property="totalLabel" destination="dbx-eY-ktL" id="Q1p-Lk-fGC"/>
+                        <outlet property="billField" destination="iJ3-0t-2rx" id="mcw-pK-xGR"/>
+                        <outlet property="tipLabel" destination="YAc-i6-oe6" id="lVq-bT-lvj"/>
+                        <outlet property="tipPercentControl" destination="bIl-Qg-hjO" id="5Bl-Cg-faH"/>
+                        <outlet property="totalLabel" destination="dbx-eY-ktL" id="p3e-0p-qxm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
