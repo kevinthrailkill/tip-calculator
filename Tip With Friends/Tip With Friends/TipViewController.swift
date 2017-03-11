@@ -27,6 +27,7 @@ class TipViewController: UIViewController {
         super.viewDidLoad()
         self.tipController = TipController()
         
+        
         let font = UIFont (name: "Courier New", size: 12)
         tipPercentControl.setTitleTextAttributes([NSFontAttributeName: font!],
                                                 for: .normal)

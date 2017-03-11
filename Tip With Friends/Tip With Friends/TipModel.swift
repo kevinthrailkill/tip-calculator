@@ -19,5 +19,8 @@ class TipModel: NSObject {
         self.total = bill + tip
         
     }
+    
+    
+    
 
 }

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Tip_Watch" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="nuL-DS-oxg">
+                            <items>
+                                <label alignment="center" text="Tip With Friends" id="Da0-K6-usd">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="qA0-Mk-1zo">
+                            <items>
+                                <label width="0.59999999999999998" alignment="left" text="Dollar" textAlignment="center" id="wYi-pr-AFH">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                                <label width="0.40000000000000002" alignment="right" text="Cent" textAlignment="center" id="1DJ-lw-ObE">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" spacing="0.0" id="RBa-xR-iqT">
+                            <items>
+                                <picker width="0.59999999999999998" height="50" alignment="left" focusStyle="stack" id="oSi-UL-j0V">
+                                    <connections>
+                                        <action selector="onDollarChange:" destination="AgC-eL-Hgc" id="zUz-2W-l1E"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.40000000000000002" height="50" alignment="left" focusStyle="stack" id="vCg-QE-kkO">
+                                    <connections>
+                                        <action selector="onCentChange:" destination="AgC-eL-Hgc" id="Ncz-XQ-9xC"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="iJE-MT-pM2">
+                            <items>
+                                <label width="0.5" alignment="left" text="# Friends" textAlignment="center" id="2S5-10-m94">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                                <label width="0.5" alignment="right" text="% Tip" textAlignment="center" id="FJY-9b-DIR">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="w0O-CL-UaP">
+                            <items>
+                                <picker width="0.5" height="50" alignment="left" focusStyle="stack" id="eqW-hu-QRE">
+                                    <connections>
+                                        <action selector="onFriendsChange:" destination="AgC-eL-Hgc" id="zHw-4H-g3v"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.5" height="50" alignment="left" focusStyle="stack" id="d07-DO-0mL">
+                                    <connections>
+                                        <action selector="onPercentChange:" destination="AgC-eL-Hgc" id="qGP-wH-9LE"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="K7d-KC-tdJ">
+                            <items>
+                                <group width="1" alignment="left" id="TbK-pl-IdU">
+                                    <items>
+                                        <label alignment="left" text="+" id="WVJ-R6-8dP">
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                        </label>
+                                        <label alignment="right" text="Tip" textAlignment="right" id="zCo-Uy-Qz9">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="3e0-FA-MXe">
+                                    <items>
+                                        <label alignment="left" text="=" id="kzg-CJ-H6S">
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                        </label>
+                                        <label alignment="right" text="Total" textAlignment="right" id="JGv-xz-Mo5">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="aZJ-nV-v3A">
+                                    <items>
+                                        <label alignment="left" text="Split " textAlignment="left" id="IDM-4n-1x2">
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                        </label>
+                                        <label alignment="right" text="Amount" textAlignment="right" id="Gb9-J4-3rw">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Calulcate Tip" id="qqx-FS-gqQ">
+                            <connections>
+                                <action selector="calculateTip" destination="AgC-eL-Hgc" id="KKy-6a-VmI"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="centPicker" destination="vCg-QE-kkO" id="l8Z-Hl-Btr"/>
+                        <outlet property="dollarPicker" destination="oSi-UL-j0V" id="XBI-Mo-A6D"/>
+                        <outlet property="peoplePicker" destination="eqW-hu-QRE" id="FbQ-rD-YnO"/>
+                        <outlet property="percentPicker" destination="d07-DO-0mL" id="w6E-Y3-tx5"/>
+                        <outlet property="splitAmount" destination="Gb9-J4-3rw" id="Niz-KI-Hfe"/>
+                        <outlet property="splitGroup" destination="aZJ-nV-v3A" id="apA-nS-JSW"/>
+                        <outlet property="splitLabel" destination="IDM-4n-1x2" id="VBU-j5-K2G"/>
+                        <outlet property="tipLabel" destination="zCo-Uy-Qz9" id="4PY-e7-lXl"/>
+                        <outlet property="tipTotalGroup" destination="K7d-KC-tdJ" id="ovz-Cf-s2s"/>
+                        <outlet property="totalLabel" destination="JGv-xz-Mo5" id="bat-DD-aec"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
