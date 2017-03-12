@@ -35,6 +35,9 @@ class TipViewController: UIViewController {
         super.viewDidLoad()
         self.tipController = TipController()
         
+        let color = UIColor.lightText
+        billField.attributedPlaceholder = NSAttributedString(string: billField.placeholder!, attributes: [NSForegroundColorAttributeName : color])
+        
         billFieldView.transform = bottom
         optionsView.transform = bottom
         optionsView.isHidden = true
