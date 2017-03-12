@@ -15,11 +15,19 @@ class TipViewController: UIViewController {
     @IBOutlet weak var tipPercentControl: UISegmentedControl!
     var tipController : TipController?
 
+    @IBOutlet weak var optionsView: UIView!
     
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var total4PeopleLabel: UILabel!
     @IBOutlet weak var total3PeopleLabel: UILabel!
     @IBOutlet weak var total2PeopleLabel: UILabel!
+    @IBOutlet weak var billFieldView: UIView!
+    
+    
+    let top = CGAffineTransform(translationX: 0, y: 0)
+    let bottom = CGAffineTransform(translationX: 0, y: 200)
+    
+   
     
    
     
@@ -27,6 +35,9 @@ class TipViewController: UIViewController {
         super.viewDidLoad()
         self.tipController = TipController()
         
+        billFieldView.transform = bottom
+        optionsView.transform = bottom
+        optionsView.isHidden = true
         
         let font = UIFont (name: "Courier New", size: 12)
         tipPercentControl.setTitleTextAttributes([NSFontAttributeName: font!],
@@ -103,7 +114,45 @@ class TipViewController: UIViewController {
     
     @IBAction func calculateTip(_ sender: AnyObject) {
         
-        self.tipController!.calculateTip(billAmount: Double(billField.text!) ?? 0, tipLocation: tipPercentControl.selectedSegmentIndex)
+        
+        if(billField.text?.characters.count == 0){
+            
+            UIView.animate(withDuration: 0.75, delay: 0.0, options: [], animations: {
+                // Add the transformation in this block
+                // self.container is your view that you want to animate
+                
+                self.billFieldView.transform = self.bottom
+                self.optionsView.transform = self.bottom
+                self.optionsView.isHidden = true
+
+
+            }, completion: nil)
+            
+            
+            
+        }else{
+            self.tipController!.calculateTip(billAmount: Double(billField.text!) ?? 0, tipLocation: tipPercentControl.selectedSegmentIndex)
+            
+            
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: [], animations: {
+                // Add the transformation in this block
+                // self.container is your view that you want to animate
+                
+                self.billFieldView.transform = self.top
+
+                
+          //
+               self.optionsView.transform = self.top
+                self.optionsView.isHidden = false
+
+                
+            }, completion: nil)
+
+            
+            
+        }
+        
+        
         
     }
 
