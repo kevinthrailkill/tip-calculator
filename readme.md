@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [X] Added a Watchkit Extension for the so you can calculate the tip on your apple watch
+* [X] Added a Watchkit Extension for the so you can calculate the tip on your apple watch
 
 ## Video Walkthrough 
 
@@ -30,16 +30,13 @@ Here's a walkthrough of implemented user stories:
 <a href="http://imgur.com/EXFYxBv"><img src="http://i.imgur.com/EXFYxBv.gif" title="Tip Calculator Walk Through" /></a>
 
 
-
-
-
 <a href="http://imgur.com/pIYNRK9"><img src="http://i.imgur.com/pIYNRK9.gif" title="Watch kit walkthrough" /></a>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+The biggest challenge that I had making this app was making the watch extension. It took me a while to figure out how to connect everything. Another challenge that I had was with the animation and sliding up the views. It took a little tinkering and going though some tutorials to get things the way I wanted.
 
 ## License
 
